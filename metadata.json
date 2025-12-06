@@ -1,5 +1,5 @@
 {
   "name": "SiteLink AI",
-  "description": "A secure, client-side construction assistant for drafting RFIs and reviewing submittals using Gemini 2.5 Flash.",
+  "description": "A secure, client-side construction assistant for drafting RFIs and reviewing submittals using AI.",
   "requestFramePermissions": []
 }
