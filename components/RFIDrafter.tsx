@@ -1,7 +1,7 @@
 
 import React, { useState, useRef } from 'react';
 import { RFI, Priority, RFIDraftResponse } from '../types';
-import { draftRFI } from '../services/geminiService';
+import { draftRFI } from '../services/openaiService';
 import { Wand2, Loader2, Save, FileText, Upload, Printer, Calendar, Undo, Redo } from 'lucide-react';
 
 interface RFIDrafterProps {

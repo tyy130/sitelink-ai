@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { JHA, JHAResponse } from '../types';
-import { generateJHA } from '../services/geminiService';
+import { generateJHA } from '../services/openaiService';
 import { ShieldAlert, HardHat, Loader2, Save, Plus, Trash2, Printer } from 'lucide-react';
 
 interface SafetyAssistantProps {

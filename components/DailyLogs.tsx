@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { DailyLog, FieldIssue, LaborEntry, JHA } from '../types';
-import { polishDailyLog } from '../services/geminiService';
+import { polishDailyLog } from '../services/openaiService';
 import { BookOpen, Sun, Users, Clock, Wand2, Save, Calendar, Loader2, Info, StickyNote, ShieldAlert } from 'lucide-react';
 
 interface DailyLogsProps {

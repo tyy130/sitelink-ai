@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Submittal, SubmittalReviewResponse } from '../types';
-import { reviewSubmittal } from '../services/geminiService';
+import { reviewSubmittal } from '../services/openaiService';
 import { ScanSearch, Loader2, Save, AlertTriangle, XCircle, Upload, Briefcase, Calendar, Plus, Filter, ArrowLeft, FileText, CheckCircle2, Paperclip, Download, X, Trash2 } from 'lucide-react';
 
 interface SubmittalReviewProps {

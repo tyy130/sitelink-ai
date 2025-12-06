@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { ToolboxTalk, ToolboxTalkResponse } from '../types';
-import { generateToolboxTalk } from '../services/geminiService';
+import { generateToolboxTalk } from '../services/openaiService';
 import { Users, Loader2, Sparkles, Plus, CheckCircle, UserPlus, Trash2 } from 'lucide-react';
 
 interface ToolboxTalksProps {

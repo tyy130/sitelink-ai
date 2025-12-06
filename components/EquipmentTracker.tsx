@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { EquipmentItem, MaintenancePredictionResponse } from '../types';
-import { predictMaintenance } from '../services/geminiService';
+import { predictMaintenance } from '../services/openaiService';
 import { Hammer, Plus, Clock, AlertTriangle, CheckCircle, Trash2, Loader2, Sparkles, Wrench } from 'lucide-react';
 
 interface EquipmentTrackerProps {
