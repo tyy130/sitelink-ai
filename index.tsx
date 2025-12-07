@@ -11,6 +11,7 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
+    {console.log('SiteLink AI: mounting app')}
     <App />
   </React.StrictMode>
 );
