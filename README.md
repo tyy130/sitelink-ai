@@ -15,12 +15,8 @@ View your app in AI Studio: https://ai.studio/apps/drive/1pgK_2VX18Oh4j0BtO2_Btu
 
 1. Install dependencies:
    `npm install`
-2. Set the `OPENAI_API_KEY` in [.env.local](.env.local) to your OpenAI API key
-If you'd like to use Google's Gemini instead of OpenAI, set these instead:
-
-- `USE_GEMINI=true`
-- `GEMINI_API_KEY=your_gemini_api_key_here`
-
-When `USE_GEMINI` is true the app will call the Gemini proxy endpoint so API keys remain server-side.
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key (recommended).
+   If you prefer to use OpenAI instead, set `OPENAI_API_KEY` in `.env.local` and leave `USE_GEMINI` unset or false.
+   To explicitly switch providers you can set `USE_GEMINI` (true/false).
 3. Run the app:
    `npm run dev`

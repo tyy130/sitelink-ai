@@ -10,10 +10,10 @@ SiteLink AI is a construction management dashboard built with **React 19**, **Vi
 - **Data Model:** All core interfaces (`Project`, `RFI`, `Submittal`, etc.) are defined in `types.ts`. Always reference this file when modifying data structures.
 
 ## AI Integration Pattern
-- **Service Layer:** All AI interactions are encapsulated in `services/openaiService.ts`.
-- **Model:** We use `gpt-4o` via the `openai` SDK.
-- **Structured Output:** AI prompts are designed to return structured JSON using OpenAI's `response_format` with JSON Schema.
-- **Environment:** By default the API key is loaded from `.env.local` as `OPENAI_API_KEY` and exposed via `vite.config.ts` as `process.env.API_KEY`.
+- **Service Layer:** All AI interactions are encapsulated in `services/geminiService.ts`.
+- **Model:** The app uses Google's Gemini model (`gemini-2.5-flash`) via the `@google/genai` SDK by default.
+- **Structured Output:** AI prompts are designed to return structured JSON using the SDK's response schema settings; `services/geminiService.ts` defines response schemas for type-safety.
+- **Environment:** By default the API key is loaded from `.env.local` as `GEMINI_API_KEY` and exposed via `vite.config.ts` as `process.env.API_KEY` when `USE_GEMINI=true`.
 	To use Gemini set `USE_GEMINI=true` and `GEMINI_API_KEY` in your environment (Vercel or `.env.local` for local dev). When `USE_GEMINI` is set the client will call `api/gemini-proxy` and keep keys server-side.
 
 ## Component Guidelines
