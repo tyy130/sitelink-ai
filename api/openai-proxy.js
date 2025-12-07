@@ -89,7 +89,7 @@ export default async function handler(req, res) {
         }
 
         // success (2xx/3xx) or other non-retryable status
-        const data = await upstreamRes.text();
+          // Basic per-client token-bucket rate-limiter to prevent bursts from a single client
         const contentType = upstreamRes.headers.get('content-type') || 'application/json';
         res.status(upstreamRes.status).setHeader('Content-Type', contentType).send(data);
         return;
