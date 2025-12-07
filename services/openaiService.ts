@@ -4,10 +4,7 @@ import { RFIDraftResponse, SubmittalReviewResponse, JHAResponse, ToolboxTalkResp
 // Initialize OpenAI Client
 // dangerouslyAllowBrowser: true is needed because we are running in a client-side Vite app.
 // In a production app, you should proxy requests through a backend to protect your API key.
-const openai = new OpenAI({
-  apiKey: process.env.API_KEY,
-  dangerouslyAllowBrowser: true 
-});
+import openai from "./openaiProxyClient";
 
 const MODEL_NAME = "gpt-4o";
 
