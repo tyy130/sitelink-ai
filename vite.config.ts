@@ -11,8 +11,11 @@ export default defineConfig(({ mode }) => {
       },
       plugins: [react()],
       define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+        // Expose the correct API key at build time depending on provider selection
+        'process.env.API_KEY': JSON.stringify(env.USE_GEMINI === 'true' ? env.GEMINI_API_KEY : env.OPENAI_API_KEY),
+        'process.env.OPENAI_API_KEY': JSON.stringify(env.OPENAI_API_KEY),
+        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+        'process.env.USE_GEMINI': JSON.stringify(env.USE_GEMINI || '')
       },
       resolve: {
         alias: {
